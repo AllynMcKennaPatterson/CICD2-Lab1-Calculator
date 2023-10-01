@@ -15,6 +15,11 @@ public class Calculator {
         this.solution = solution;
     }
 
+    public Calculator(String operator, float solution) {
+        this.operator = operator;
+        this.solution = solution;
+    }
+
     public int getNum1() {
         return num1;
     }
