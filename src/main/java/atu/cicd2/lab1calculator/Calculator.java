@@ -8,7 +8,16 @@ public class Calculator {
     private String operator;
     private float solution;
 
-    public Calculator() {
+    public Calculator(int num1, int num2, String operator, float solution) {
+        this.num1 = num1;
+        this.num2 = num2;
+        this.operator = operator;
+        this.solution = solution;
+    }
+
+    public Calculator(String operator, float solution) {
+        this.operator = operator;
+        this.solution = solution;
     }
 
     public int getNum1() {
@@ -71,7 +80,7 @@ public class Calculator {
                 this.operator = "Error: Invalid operator entered";
                 this.solution = 0;
         }
-        return new Calculator();
+        return new Calculator(this.num1, this.num2, this.operator, this.solution);
 
     }
 }
