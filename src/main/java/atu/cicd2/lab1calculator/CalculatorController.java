@@ -6,12 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CalculatorController {
     @GetMapping("/calculate")
-    public Calculator calculate(int num1, int num2, String operation){
-        Calculator result = new Calculator(operation, 0);
-        result.setNum1(num1);
-        result.setNum2(num2);
-        result.setOperator(operation);
+    public Calculator calculate(int num1, int num2, String operator){
+        Calculator result = new Calculator(operator, 0);
+        result.setOperator(operator);
 
-        return result.CalculateResult();
+        return result.CalculateResult(num1, num2);
     }
 }
