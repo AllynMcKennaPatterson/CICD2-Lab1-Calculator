@@ -1,0 +1,16 @@
+b)  Is the above exercise using @RequestParam or @PathVariables?
+    The exercise is using @RequestParam. I know this because the CalculatorController
+    class extracts values from the query string and not the URI path.
+
+c)  Which would be correct to use for this example? Why?
+    There are pros and cons to using either.
+      * When using @PathVariables we ensure that the client enters a value for each parameter.
+        A downside would be that the URI does not clearly state which parameter is num1 and
+        which is num2, this would result in different values when dividing.
+      * When using @RequestParams we allow clients to provide parameters in any order, and it
+        clearly states which parameter they are setting.
+        The downside is that our query parameters are not optional and are necessary to calculate
+        the result.
+    In this case I believe @PathVariables is correct because it is important that all parameters
+    are given a value.
+
